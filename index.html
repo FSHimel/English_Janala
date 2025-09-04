@@ -24,7 +24,7 @@
      <link rel="stylesheet" href="./tailwind.config.css">
 </head>
 <body>
-    <nav class="navbar justify-between  bg-[#BADEFF]">
+    <nav class="navbar justify-between  bg-[#1a91ff1a]">
         
             <div class="flex items-center">
                 <a href="" class="text-[14px] md:text-[20px] font-semibold">English</a>
@@ -57,20 +57,15 @@
     </div>
     <section class="w-11/12 mx-auto mt-5">
         <h1 class="text-4xl font-bold text-center"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
-        <div class="grid grid-cols-4 md:grid-cols-7 gap-1.5 md:gap-5 mt-4">
-            <button href="" class="btn btn-outline btn-primary "><img src="./assets/fa-book-open.png" alt="">Lesson -1</button>
-            <button href="" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -2</button>
-            <button href="" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -3</button>
-            <button href="" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -4</button>
-            <button href="" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -5</button>
-            <button href="" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -6</button>
-            <button href="" class="btn btn-outline btn-primary"><img src="./assets/fa-book-open.png" alt="">Lesson -7</button>
-        </div>
-        <div class="mx-auto flex flex-col justify-center items-center mt-10 py-16">
-            <p class="font-bangla text-[14px] text-[#79716B]">আপনি এখনো কোন Lesson Select করেন ন</p>
-            <h2 class="font-bangla text-[35px]">একটি <span>Lesson Select</span> করুন।</h2>
+        <div id="lebel-container" class="flex flex-wrap justify-center gap-1.5 md:gap-5 mt-4">
+            
         </div>
     </section>
-    
+
+    <section id="word-container" class="bg-gray-100 p-10 my-10 w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+    </section>
+    <script src="./script/index.js"></script>
 </body>
 </html>
+
