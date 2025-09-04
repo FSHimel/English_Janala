@@ -33,9 +33,9 @@
             </div>
             <div class="flex-none">
                 <ul class="flex gap-4">
-                <a href="" class="btn btn-outline btn-primary px-[5px] md:px-[16px] text-[10px] md:text-[14px]"><img src="./assets/fa-circle-question.png" alt="">FAQ</a>
-                <a href="" class="btn btn-outline btn-primary px-[5px] md:px-[16px] text-[10px] md:text-[14px]"><img src="./assets/fa-book-open.png" alt="">Learn</a>
-                <a href="" class="btn btn-outline btn-primary px-[5px] md:px-[16px] text-[10px] md:text-[14px]"><img src="./assets/fa-arrow-right-from-bracket.png" alt="">Logout</a>
+                <a href="" class="btn btn-outline btn-primary px-[5px] md:px-[16px] text-[10px] md:text-[14px]"><i class="fa-solid fa-circle-info"></i>FAQ</a>
+                <a href="" class="btn btn-outline btn-primary px-[5px] md:px-[16px] text-[10px] md:text-[14px]"><i class="fa-solid fa-book-open"></i>Learn</a>
+                <a href="" class="btn btn-outline btn-primary px-[5px] md:px-[16px] text-[10px] md:text-[14px]"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
                 
                 </ul>
             </div>
@@ -63,8 +63,25 @@
     </section>
 
     <section id="word-container" class="bg-gray-100 p-10 my-10 w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
-        
+        <div class="col-span-full rounded-xl text-center py-10 space-y-3">
+            <p class="font-bangla  text-[12px] md:text-[14px] text-[#79716B]">আপনি এখনো কোন Lesson Select করেন নি</p>
+            <h2 class="font-bangla text-[25px] md:text-[35px]">একটি <span>Lesson Select</span> করুন।</h2>
+        </div>
     </section>
+      <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     <script src="./script/index.js"></script>
 </body>
 </html>
