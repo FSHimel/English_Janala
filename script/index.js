@@ -69,7 +69,7 @@ const displayWords = (words) =>{
     }
     // get into every lessons 
     for(const word of words){
-        console.log(word)
+        // console.log(word)
         // create cards 
         const cardDiv = document.createElement("div")
         cardDiv.innerHTML = `
@@ -78,13 +78,36 @@ const displayWords = (words) =>{
             <p class=" font-semibold">Meaning/Pronunciation</p>
             <div class="font-bangla text-2xl font-medium">"${word.meaning ? word.meaning: "অর্থ খুঁজে পাওয়া যায়নি"}/${word.pronunciation ? word.pronunciation:"উচ্চারণ পাওয়া যায়নি"}"</div>
             <div class="flex justify-between items-center mt-4">
-                <button onclick="my_modal_5.showModal()" class="btn p-[12px] bg-gray-100 hover:bg-[#1a91ff1a] rounded-[8px]"><i class="fa-solid fa-circle-info"></i></button>
+                <button onclick="loadWordDetail(${word.id})" class="btn p-[12px] bg-gray-100 hover:bg-[#1a91ff1a] rounded-[8px]"><i class="fa-solid fa-circle-info"></i></button>
                 <button class="btn p-[12px] bg-gray-100 hover:bg-[#1a91ff1a] rounded-[8px]"><i class="fa-solid fa-volume-high"></i></button>
             </div>
         </div>
         `
         wordContainer.append(cardDiv)
     }
+}
+
+const loadWordDetail=(id)=>{
+    const url = `https://openapi.programming-hero.com/api/word/${id}`
+    
+    fetch(url)
+    .then(res=>res.json())
+    .then(data => displayDetails(data.data))
+    
+}
+
+const displayDetails = (detail) =>{
+    //get the container
+    const detailsContainer = document.getElementById("details-container")
+    detailsContainer.innerHTML=""
+    document.getElementById("my_modal").showModal()
+    //get into every word details
+    
+        //create a div
+        
+        //append child to parent
+        
+    
 }
 
 loadLessons()
